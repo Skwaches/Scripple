@@ -9,7 +9,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(VENDOR_DIR "../.Vendor")
 
 # Dependencies
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/../Thoughts" Think)
+add_subdirectory("${VENDOR_DIR}/Thoughts" Think)
 add_subdirectory("${VENDOR_DIR}/SDL" SDL3)
 add_subdirectory("${VENDOR_DIR}/SDL_ttf" SDL_ttf)
 
