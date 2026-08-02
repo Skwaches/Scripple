@@ -8,12 +8,12 @@ Definitely not my proudest work. But hey, it kinda works!
 Data is from the [MNIST dataset](http://yann.lecun.com/exdb/mnist/)  
 
 ## Dependencies
-[SDL3](https://github.com/libsdl-org/SDL) for Window creation and renderering.  
-[SDL3_ttf](https://github.com/libsdl-org/SDL_ttf) for font loading and texture creation.  
-`cmake` for building.  
-[`Think`](https://github.com/Skwaches/Think).  
-[`Inputs`](https://github.com/Skwaches/Inputs)  
-[`Matrix`](https://github.com/Skwaches/Matrix)  
+* [SDL3](https://github.com/libsdl-org/SDL) for Window creation and renderering
+* [SDL3_ttf](https://github.com/libsdl-org/SDL_ttf) for font loading and texture creation.
+* [Think](https://github.com/Skwaches/Think)
+* [Inputs](https://github.com/Skwaches/Inputs)
+* [Matrix](https://github.com/Skwaches/Matrix)
+* cmake
 
 
 ## Usage
