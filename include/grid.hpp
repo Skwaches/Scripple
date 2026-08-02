@@ -1,6 +1,8 @@
 #pragma once
+#include "SDL3/SDL_rect.h"
+#include "SDL3/SDL_render.h"
 #include "matrix.hpp"
-#include <SDL3/SDL.h>
+
 class Grid {
 	public:
 		SDL_FPoint size;

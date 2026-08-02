@@ -1,5 +1,5 @@
 #include "machine.hpp"
-#include "thoughts.hpp"
+#include <think.hpp>
 #include <format>
 #include <time.h>
 

@@ -1,3 +1,4 @@
+#include "SDL3_ttf/SDL_ttf.h"
 #include "grid.hpp"
 #include "load.hpp"
 #include "machine.hpp"

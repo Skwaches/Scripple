@@ -1,6 +1,6 @@
 #pragma once
 #include "grid.hpp"
-#include "thoughts.hpp"
+#include "think.hpp"
 #include <SDL3/SDL.h>
 
 extern SDL_AppResult APP_STATE;
