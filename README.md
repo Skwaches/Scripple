@@ -15,12 +15,13 @@ Data is from the [MNIST dataset](http://yann.lecun.com/exdb/mnist/)
 * [Matrix](https://github.com/Skwaches/Matrix)
 * cmake
 
-
 ## Usage
 Just edit the [CMakeLists.txt](CMakeLists.txt) 
-so that VENDOR_DIR points to the correct folder and it should work out the box.
+so that VENDOR_DIR points to the correct folder.
+Use cmake and make to build it, it should work out the box.
 Executable is named **walk** _get it? Cause ~S~cripple_
 
-> [!IMPORTANT]
-Might need an Nvidia GPU unfortunately.
-Will test and fix.
+>[!TIP]
+[Matrix](https://github.com/Skwaches/Matrix) can run on an Nvidia GPU.  
+It'll probably be a bit faster with it.  
+

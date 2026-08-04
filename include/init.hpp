@@ -17,7 +17,7 @@ typedef struct Display{
 	SDL_Renderer* renderer = NULL;
 	SDL_Point size = {1920, 1200};
 	SDL_WindowFlags flags;
-	const char* title = "Scribble";
+	const char* title = "Walk young one!";
 }Display;
 
 extern Display SCREEN;
