@@ -16,7 +16,7 @@ Grid FONTS(
 		);
 
 std::string baseFolder = "../assets/Number-Recognition";
-Network MACHINE(baseFolder + "/Models/epoch-10.bin");
+Network MACHINE(baseFolder + "/Models/Paper/epoch-10.bin");
 
 //Data
 std::vector<std::vector<float>> Testing_data, Training_data;
@@ -32,11 +32,11 @@ void load_Training(){
 }
 
 int maxEpoch = 10;
-void test(){
-	test(Testing_data, Testing_labels, Training_data, Training_labels, baseFolder + "/Models", maxEpoch);
+void test(std::string folder){
+	test(Testing_data, Testing_labels, Training_data, Training_labels, baseFolder + "/Models/" + folder, maxEpoch);
 }
-void train(){
-	train({784, 128, 128, 10}, Training_data, Training_labels, baseFolder + "/Models", maxEpoch);
+void train(std::string folder){
+	train({784, 128, 128, 10}, Training_data, Training_labels, baseFolder + "/Models/" + folder, maxEpoch);
 }
 
 void init(){
@@ -56,7 +56,6 @@ void init(){
 	GRID.space({0,0});
 	MACHINE.normalise = hardMax;
 }
-
 
 void quit(){
 	quitCUDA();

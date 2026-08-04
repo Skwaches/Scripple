@@ -9,6 +9,8 @@ SDL_AppResult SDL_AppInit(void **appstate, int argc, char **argv){
 	init();
 	return APP_STATE;
 }
+#define max(a,b) a > b ? a:b;
+#define min(a,b) a < b ? a:b;
 
 SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event){
 	if(event->type == SDL_EVENT_QUIT){
@@ -18,8 +20,12 @@ SDL_AppResult SDL_AppEvent(void *appstate, SDL_Event *event){
 	else if(event->type == SDL_EVENT_WINDOW_PIXEL_SIZE_CHANGED){
 		SCREEN.size.x = event->window.data1;
 		SCREEN.size.y = event->window.data2;
+		float smaller = min(SCREEN.size.x,SCREEN.size.y);
+		GRID.resize({smaller, smaller});
+		FONTS.move({GRID.size.x, 0});
+		smaller = min(SCREEN.size.y/10.0, SCREEN.size.x - GRID.size.x);
+		FONTS.resize({smaller ,static_cast<float>(SCREEN.size.y)});
 	}
-
 	inputs.loadEvent(*event);
 	return APP_STATE;
 }
