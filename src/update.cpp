@@ -15,25 +15,22 @@ void update(){
 	// Cap frame rate for drawing.
 	static Uint64 previous = SDL_GetTicks(),
 				  elapsed = 0;
-	const Uint64 fps = 240,
-	 			 delay = 1000/fps;
+	static const Uint64 fps = 240,
+	 			 	    delay = 1000/fps;
 	Uint64 current = SDL_GetTicks();
 	elapsed += current - previous; 
 	previous = current;
-	bool timerPassed = false;
-	if ( elapsed >= delay){
-		timerPassed = true;
-		elapsed = 0;
-	}
+	bool timerPassed = elapsed >= delay;
+	if (timerPassed) elapsed = 0;
 
 	// Scribbling
 	bool scribble = false;
-	if (inputs.cursorMoved() ) {
+	if (inputs.cursorMoved() && timerPassed) {
 		if (inputs.mouseHeld(SDL_BUTTON_LEFT)) {
 			GRID.draw(inputs.cursor(), true, 3);
 			scribble = true;
 		} 
-		else if (inputs.mouseHeld(SDL_BUTTON_RIGHT) && timerPassed) {
+		else if (inputs.mouseHeld(SDL_BUTTON_RIGHT)) {
 			GRID.draw(inputs.cursor(), false, 5);
 			scribble = true;
 		}

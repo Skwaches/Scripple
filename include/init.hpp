@@ -15,8 +15,8 @@ extern SDL_AppResult APP_STATE;
 typedef struct Display{
 	SDL_Window* window = NULL;
 	SDL_Renderer* renderer = NULL;
-	SDL_Point size = {1920, 1200};
-	SDL_WindowFlags flags;
+	SDL_Point size = {600, 500};
+	SDL_WindowFlags flags = SDL_WINDOW_RESIZABLE;
 	const char* title = "Walk young one!";
 }Display;
 

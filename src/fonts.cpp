@@ -7,7 +7,7 @@ int steps = 2;
 std::vector<std::vector<SDL_Texture*>> numberTextures(steps); 
 
 bool fonts(SDL_Renderer* renderer){
-	TTF_Font* font = TTF_OpenFont("../assets/0xProtoNerdFont-Bold.ttf", 80);
+	TTF_Font* font = TTF_OpenFont("0xProtoNerdFont-Bold.ttf", 80);
 	if(!font)
 		return false;
 	SDL_Color correct =   { 255, 255, 255, SDL_ALPHA_OPAQUE};

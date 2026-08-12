@@ -1,0 +1,12 @@
+[submodule "vendor/Think"]
+	path = vendor/Think
+	url = https://github.com/Skwaches/Think.git
+	branch = main
+[submodule "vendor/Inputs"]
+	path = vendor/Inputs
+	url = https://github.com/Skwaches/Inputs.git
+	branch = main
+[submodule "vendor/SDL_ttf"]
+	path = vendor/SDL_ttf
+	url = https://github.com/libsdl-org/SDL_ttf.git
+	branch = main

@@ -16,7 +16,7 @@ Grid FONTS(
 		);
 
 std::string baseFolder = "../assets/Number-Recognition";
-Network MACHINE(baseFolder + "/Models/Paper/epoch-10.bin");
+Network MACHINE("epoch-10.bin");
 
 //Data
 std::vector<std::vector<float>> Testing_data, Training_data;
@@ -51,8 +51,6 @@ void init(){
 				&SCREEN.window, &SCREEN.renderer));
 	SDL_CHECK(fonts(SCREEN.renderer));
 
-	load_Testing();
-	load_Training();
 	GRID.space({0,0});
 	MACHINE.normalise = hardMax;
 }
